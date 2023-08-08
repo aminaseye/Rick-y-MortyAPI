@@ -13,6 +13,17 @@ function init() {
     return __awaiter(this, void 0, void 0, function* () {
         const characterList = document.querySelector("#characterList");
         const characters = yield getCharacters();
-        console.log(characters);
+        characters.forEach((char) => {
+            const characterCard = document.createElement("div");
+            const characterCardTitle = document.createElement("h3");
+            const characterCardTitleTxt = document.createTextNode(char.name);
+            characterCardTitle.appendChild(characterCardTitleTxt);
+            const characterImg = document.createElement("img");
+            characterImg.src = char.image;
+            characterImg.alt = `${char.name} Image `;
+            characterCard.appendChild(characterCardTitle);
+            characterCard.appendChild(characterImg);
+            characterList === null || characterList === void 0 ? void 0 : characterList.appendChild(characterCard);
+        });
     });
 }
