@@ -1,9 +1,24 @@
-body  {
-    background-image:url("fondorym.png");
+header {
+    margin:5em 0em 0em 10em;
+    height: 18em;
+    background-image: url("rymlogo.png") ;
     background-repeat: no-repeat;
     
 }
+
+/* body  { */
+    background-image:url("fondorym.png");
+    background-repeat: no-repeat;
+ 
+   
+
+    
+/* } */
+
+
 footer {
+    background-color: blanchedalmond;
+    height: 10em;
     position:absolute;
 
 }

@@ -14,14 +14,21 @@ async function init(){
         const characterImg = document.createElement("img");
         characterImg.src = char.image;
         characterImg.alt= `${char.name} Image `;
+        characterImg.addEventListener("click", sayAlt);
 
         characterCard.appendChild(characterCardTitle);
         characterCard.appendChild(characterImg);
 
-        characterList?.appendChild(characterCard);
+        characterList!.appendChild(characterCard);
+
+
         // console.log(char);
     });
     
+    function sayAlt(this: HTMLImageElement){
+        console.log(this.alt);
+
+    }
     // console.log(characters);
 
 }

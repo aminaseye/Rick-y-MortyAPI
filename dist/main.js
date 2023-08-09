@@ -21,9 +21,13 @@ function init() {
             const characterImg = document.createElement("img");
             characterImg.src = char.image;
             characterImg.alt = `${char.name} Image `;
+            characterImg.addEventListener("click", sayAlt);
             characterCard.appendChild(characterCardTitle);
             characterCard.appendChild(characterImg);
-            characterList === null || characterList === void 0 ? void 0 : characterList.appendChild(characterCard);
+            characterList.appendChild(characterCard);
         });
+        function sayAlt() {
+            console.log(this.alt);
+        }
     });
 }
