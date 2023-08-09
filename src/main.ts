@@ -1,4 +1,5 @@
 import { getCharacters } from "./utils/API.js";
+import { getLocation } from "./utils/API.js";
 window.addEventListener("load", init);
 
 async function init(){ 
@@ -25,7 +26,8 @@ async function init(){
         // console.log(char);
     });
     
-    function sayAlt(this: HTMLImageElement){
+    function sayAlt(this: HTMLImageElement, event: Event){
+        
         console.log(this.alt);
 
     }

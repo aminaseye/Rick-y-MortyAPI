@@ -26,7 +26,7 @@ function init() {
             characterCard.appendChild(characterImg);
             characterList.appendChild(characterCard);
         });
-        function sayAlt() {
+        function sayAlt(event) {
             console.log(this.alt);
         }
     });

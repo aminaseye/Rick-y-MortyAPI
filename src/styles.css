@@ -7,9 +7,9 @@ header {
 }
 
 /* body  { */
-    background-image:url("fondorym.png");
+    /* background-image:url("fondorym.png");
     background-repeat: no-repeat;
- 
+  */
    
 
     
@@ -19,6 +19,7 @@ header {
 footer {
     background-color: blanchedalmond;
     height: 10em;
+    width: 100%;
     position:absolute;
 
 }
