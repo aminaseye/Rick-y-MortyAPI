@@ -1,14 +1,18 @@
-"use strict";
-var CharacterStatus;
+export var Gender;
+(function (Gender) {
+    Gender["Female"] = "Female";
+    Gender["Male"] = "Male";
+    Gender["Genderless"] = "Genderless";
+    Gender["Unknown"] = "unknown";
+})(Gender || (Gender = {}));
+export var CharacterSpecies;
+(function (CharacterSpecies) {
+    CharacterSpecies["Alien"] = "Alien";
+    CharacterSpecies["Human"] = "Human";
+})(CharacterSpecies || (CharacterSpecies = {}));
+export var CharacterStatus;
 (function (CharacterStatus) {
-    CharacterStatus[CharacterStatus["Alive"] = 0] = "Alive";
-    CharacterStatus[CharacterStatus["Dead"] = 1] = "Dead";
-    CharacterStatus[CharacterStatus["Uknown"] = 2] = "Uknown";
+    CharacterStatus["Alive"] = "Alive";
+    CharacterStatus["Dead"] = "Dead";
+    CharacterStatus["Unknown"] = "unknown";
 })(CharacterStatus || (CharacterStatus = {}));
-var CharacterGender;
-(function (CharacterGender) {
-    CharacterGender[CharacterGender["Male"] = 0] = "Male";
-    CharacterGender[CharacterGender["Female"] = 1] = "Female";
-    CharacterGender[CharacterGender["Unknown"] = 2] = "Unknown";
-    CharacterGender[CharacterGender["Genderless"] = 3] = "Genderless";
-})(CharacterGender || (CharacterGender = {}));

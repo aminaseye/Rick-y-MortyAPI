@@ -1,33 +1,37 @@
-interface Character {
-    id: number;
-    name:  string;
-    status: CharacterStatus;
-    species:  number;
-    type: string;
-    gender: CharacterGender;
-    origin: Location;
-    location:Location;
-    image: string;
-    episode: string[];
-    url: string;
-    created: string;  
-}
-enum CharacterStatus{
-    "Alive",
-    "Dead",
-    "Uknown",
-}
-enum CharacterGender{
-    "Male",
-    "Female",
-    "Unknown",
-    "Genderless",
+export interface Character {
+    id:       number;
+    name:     string;
+    status:   CharacterStatus;
+    species:  CharacterSpecies;
+    type:     string;
+    gender:   Gender;
+    origin:   Planet;
+    location: Planet;
+    image:    string;
+    episode:  string[];
+    url:      string;
+    created:  Date;
 }
 
-interface Location{
-  name: string;
-  url: string;       
-
+export enum Gender {
+    Female = "Female",
+    Male = "Male",
+    Genderless = "Genderless",
+    Unknown = "unknown",
 }
 
+export interface Planet {
+    name: string;
+    url:  string;
+}
 
+export enum CharacterSpecies {
+    Alien = "Alien",
+    Human = "Human",
+}
+
+export enum CharacterStatus {
+    Alive = "Alive",
+    Dead = "Dead",
+    Unknown = "unknown",
+}

@@ -25,10 +25,17 @@ export function getLocation(url) {
         return data.results;
     });
 }
-export function getEpisodes(url) {
+export function getEpisodes() {
     return __awaiter(this, void 0, void 0, function* () {
-        const resonse = yield fetch(urlEpisodes);
-        const data = yield resonse.json();
-        return data.result;
+        const response = yield fetch("https://rickandmortyapi.com/api/episode");
+        const data = yield response.json();
+        return data.results;
+    });
+}
+export function getSingleCharacter(url) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const response = yield fetch(url);
+        const data = yield response.json();
+        return data;
     });
 }

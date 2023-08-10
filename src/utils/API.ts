@@ -1,3 +1,6 @@
+import { Character } from "../types/Characters";
+import { Episode } from "../types/Episodes";
+
 const url = "https://rickandmortyapi.com/api";
 const urlCharacters = `${url}/character`;
 const urlLocation = `${url}/location`;
@@ -17,8 +20,13 @@ export async function getLocation(url: String): Promise<Location[]>{
     return data.results;
 }
 // export {getLocation};
-export async function getEpisodes(url: Number): Promise<Episodes>{
-    const resonse = await fetch(urlEpisodes);
-    const data = await resonse.json();
-    return data.result;
+export async function getEpisodes(): Promise<Episode[]>{
+    const response = await fetch("https://rickandmortyapi.com/api/episode");
+    const data = await response.json();
+    return data.results;
+}
+export async function getSingleCharacter(url: string):Promise<Character>{
+    const response = await fetch(url)
+    const data = await response.json();
+    return data;
 }
