@@ -1,6 +1,6 @@
 import { getCharacters } from "./utils/API.js";
 import { getLocation } from "./utils/API.js";
-window.addEventListener("load", init);
+ window.addEventListener("load", init);
 
 async function init(){ 
     const characterList = document.querySelector("#characterList");

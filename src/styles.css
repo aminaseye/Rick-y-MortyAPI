@@ -14,7 +14,9 @@ header {
 
     
 /* } */
-
+main {
+    background-color: aquamarine;
+}
 
 footer {
     background-color: blanchedalmond;

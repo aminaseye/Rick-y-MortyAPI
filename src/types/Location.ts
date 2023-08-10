@@ -1,8 +1,9 @@
-interface Location {
-    id: string;
-    name: string;
-    type: string;
+export interface Result {
+    id:        number;
+    name:      string;
+    type:      string;
     dimension: string;
-    // residents?: Resident[];
-
+    residents: string[];
+    url:       string;
+    created:   Date;
 }
