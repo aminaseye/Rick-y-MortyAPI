@@ -32,8 +32,8 @@ function openEpisodeContainer(epi) {
     const episode = epi;
     const episodeContainer = document.createElement("div");
     const name = document.createElement("h1");
-    const airDate = document.createElement("p");
-    const episodeCode = document.createElement("h1");
+    const airDate = document.createElement("h5");
+    const episodeCode = document.createElement("h2");
     const characterButtonsContainer = document.createElement("div");
     const characters = episode.characters;
     name.innerText = episode.name;
@@ -52,6 +52,7 @@ function createCharacterCard(char, container) {
     return __awaiter(this, void 0, void 0, function* () {
         const singleCharacter = yield getSingleCharacter(char);
         const characterLink = document.createElement("button");
+        characterLink.setAttribute("id", "idButton");
         const characterContainer = document.createElement("div");
         characterLink.addEventListener("click", () => {
             openCharacterModal(char, characterContainer);
@@ -81,3 +82,10 @@ function openCharacterModal(char, container) {
         });
     });
 }
+function scrollListener() {
+    let scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+    let maxHeight = document.documentElement.scrollHeight;
+    document.documentElement.clientHeight;
+    const totalScrolled = scrollPosition * 100 / maxHeight;
+}
+scrollListener();

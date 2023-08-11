@@ -68,8 +68,8 @@ const episode = epi;
 
 const episodeContainer  = document.createElement("div");
 const name = document.createElement("h1");
-const airDate = document.createElement("p");
-const episodeCode = document.createElement("h1");
+const airDate = document.createElement("h5");
+const episodeCode = document.createElement("h2");
 const characterButtonsContainer = document.createElement("div");
 const characters  = episode.characters;
 
@@ -96,13 +96,16 @@ mainContainer!.appendChild(episodeContainer);
 async function createCharacterCard(char: string, container:HTMLDivElement){
     const singleCharacter  = await getSingleCharacter(char);
     const characterLink = document.createElement("button");
+     characterLink.setAttribute("id", "idButton")
     const characterContainer = document.createElement("div");
     characterLink.addEventListener("click", ()=>{
      openCharacterModal(char, characterContainer);
 
        
     })
- 
+    // Add nav 
+//  const navImg = document.createElement("nav");
+//  navImg.setAttribute("id", "navImg");
 
     characterLink.innerText = singleCharacter.name;
     // characterLink.innerText = "species";
@@ -149,3 +152,15 @@ console.log("modal abierto");
 
 // recojo la info de character y se la pongo a los contenedores
 }
+
+function scrollListener(){
+  let scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+  let maxHeight = document.documentElement.scrollHeight;
+  document.documentElement.clientHeight;
+  
+  const totalScrolled = scrollPosition * 100 / maxHeight;
+
+ 
+    }
+
+    scrollListener();

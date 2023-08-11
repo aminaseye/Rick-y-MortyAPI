@@ -1,9 +1,31 @@
+
 header {
-    margin:5em 0em 0em 10em;
+    margin:5em 0em 0em 25em;
     height: 18em;
     background-image: url("rymlogo.png") ;
     background-repeat: no-repeat;
     
+}
+
+
+
+aside {
+    margin-left: 1em;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    height:50em;
+    width: 30%;
+    padding: 5em;
+    /* padding:1em 0 2em; */
+    text-align: center;
+  border-radius: 15px;
+    flex: space-between;
+ border: 1px solid black;
+  margin-top: 15em;
+  background-color: grey;
+    
+   
 }
 
 /* body  { */
@@ -14,15 +36,116 @@ header {
 
     
 /* } */
+#characterList{
+    background-color: aliceblue;
+    height: 70em;;
+    background-image: url("fondomain.png");
+    width:90%;
+    display: flex;
+justify-content: center;
+    /* justify-content: space-between; */
+    margin: 13px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:2em;
+   /* font-size: large; */
+   background-repeat: no-repeat;
+  margin-left:3em;
+  border-radius: 15px;
+  box-shadow: 15px;
+  overflow: visible;
+   }
+   
 main {
-    background-color: aquamarine;
+   
+    background-image: url("fondomain.png");
+    /* background-color: #35EAA0; */
     height: 80%;
+    margin-left: 28em;
+    width: 65%;
+    border-radius: 28px;
+    margin-top: 4em;
+    flex-direction: column;
+    font-size: large;
+    border:3px solid black;
+    background-repeat:no-repeat;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 12px 12px 5px 5px;
+ 
+    
+}
+#progress-bar{
+    float: left;
+    background-color: #ccc;
+    height:8px;
+    position:fixed;
+    top:0;
+    left:0 ;
+    right:0;
+    padding: 0;
+    transition: .2s;
+}
+#progress-bar span {
+    background-color: grey;
+    width: 0%;
+    height:8px;
+    display: block;
+}
+button{
+    background-color: #CCF526;
+    margin-top:1em;
+    text-align: center;
+    border-radius: 40px;
+
+
+}
+button:hover {
+    background-color:grey
+}
+footer {
+    width:125em;
+   background-image: url("fondorym.png");
+   background-repeat: no-repeat;
+    height: 10em;
+   
+    margin-top: 35em;
+position:static;
+
+}
+div p {
+    justify-content: center;
+
+}
+h2{
+    margin-left: 9px;
+    margin-bottom: -10em;
+ 
+}
+h5{ 
+    margin-top: .5px;
+    margin-left: 17em;
+   background-color: lightgrey;
+   width: 10em;
+
+
+}
+h1 {
+    font-size: large;
+    background-color: #35EAA0;
+    align-items: center;
+    margin-left: 7em;;
+    justify-content: center;
+    padding:.5rem.5rem ;
+    width:8em;
+    border-radius: 0px 0px 20px 20px;
+    border:1px solid black;
+    box-shadow: 12px 12px 5px 5px;
+}
+h1:hover{
+    background-color: antiquewhite;
 }
 
-footer {
-    background-color: blanchedalmond;
-    height: 10em;
-    width: 100%;
-    position:absolute;
-
+@media  screen {
+    
 }
